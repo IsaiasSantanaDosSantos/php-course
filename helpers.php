@@ -1,3 +1,11 @@
 <?php
 
-echo " arquivo de funçoes";
+function saudacao()
+{
+    return 'Boa tarde';
+};
+
+function resumirTexto()
+{
+    return 'Texto resumido';
+};
