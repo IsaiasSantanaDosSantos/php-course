@@ -2,10 +2,10 @@
 
 function saudacao()
 {
-    return 'Boa tarde';
+    return 'Boa tarde <hr>';
 };
 
-function resumirTexto()
+function resumirTexto($texto, $limite, $continue = '...')
 {
-    return 'Texto resumido';
+    return $texto;
 };

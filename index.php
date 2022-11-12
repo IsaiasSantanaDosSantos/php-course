@@ -7,11 +7,11 @@
 require_once 'sistema/configuracao.php';
 include_once 'helpers.php';
 
+$texto = 'texto para resumir vindo de uma variável';
+$texto = 'xxx';
 echo saudacao();
 echo '<br/>';
-echo saudacao();
-echo '<br/>';
-echo resumirTexto();
+echo resumirTexto($texto, 50, 'continue');
 
 
 
