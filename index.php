@@ -3,15 +3,24 @@
 //include → Inclui o que estiver no arquivo
 //require → Só funciona se estiver tudo corrreto com o arquivo "requerido"
 //require_once → requer apenas uma vez o arquivo solicitado
+// declare(strict_types = 1);
 
 require_once 'sistema/configuracao.php';
 include_once 'helpers.php';
 
-$texto = 'texto para resumir vindo de uma variável';
-$texto = 'xxx';
+$texto = 'texto para resumir';
+
+$string = 'texto';
+$inti = 10;
+$float = 12.25;
+$bool = true;
+$nulo = null;
+
+var_dump($string);
+echo '<hr>';
 echo saudacao();
-echo '<br/>';
-echo resumirTexto($texto, 50, 'continue');
+echo '<hr>';
+echo resumirTexto($texto, 100, 'continue');
 
 
 

@@ -1,11 +1,11 @@
 <?php
 
-function saudacao()
+function saudacao(): string
 {
-    return 'Boa tarde <hr>';
+    return 'Boa tarde';
 };
 
-function resumirTexto($texto, $limite, $continue = '...')
+function resumirTexto(string $texto, int $limite, string $continue = '...'): string
 {
     return $texto;
 };
