@@ -10,24 +10,27 @@ include_once 'helpers.php';
 
 $texto = 'texto para resumir';
 
-$string = 'texto';
-$inti = 10;
-$float = 12.25;
-$bool = true;
-$nulo = null;
+// echo $total = mb_strlen(trim($texto));
+// echo '<hr>';
+// echo $resumo = mb_substr($texto, 1, 3);
+// echo '<hr>';
 
-var_dump($string);
-echo '<hr>';
-echo saudacao();
-echo '<hr>';
-echo resumirTexto($texto, 100, 'continue');
+// echo $ocorrencia = mb_strrpos($texto, 'o');
+
+
+
+//var_dump($string);
+//echo '<hr>';
+//echo saudacao();
+//echo '<hr>';
+echo resumirTexto($texto, 15);
 
 
 
 /**
- * Próxima aula 16:
+ * Próxima aula 22:
  * 
- * https://www.youtube.com/watch?v=8SwPVFUh6P4&list=PL0N5TAOhX5E9eJ9Ix6YUIgEw3lNmaIEE9&index=15
+ * https://www.youtube.com/watch?v=jcasYy_g4lg&list=PL0N5TAOhX5E9eJ9Ix6YUIgEw3lNmaIEE9&index=21
  * 
  * 
  * 
