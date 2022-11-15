@@ -8,22 +8,10 @@
 require_once 'sistema/configuracao.php';
 include_once 'helpers.php';
 
-$texto = 'texto para resumir';
-
-// echo $total = mb_strlen(trim($texto));
-// echo '<hr>';
-// echo $resumo = mb_substr($texto, 1, 3);
-// echo '<hr>';
-
-// echo $ocorrencia = mb_strrpos($texto, 'o');
+$texto = '<h1>texto</h1> <p>para</p> resumir';
 
 
-
-//var_dump($string);
-//echo '<hr>';
-//echo saudacao();
-//echo '<hr>';
-echo resumirTexto($texto, 15);
+echo resumirTexto($texto, 50);
 
 
 
