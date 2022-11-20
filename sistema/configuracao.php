@@ -1,4 +1,3 @@
 <?php
 //Arquivo de configuração do sistema.
-
-//echo 'Echo';
+date_default_timezone_set('America/Sao_Paulo');

@@ -7,18 +7,18 @@
 
 require_once 'sistema/configuracao.php';
 include_once 'helpers.php';
+//echo formatarValor();
 
-$texto = '<h1>texto</h1> <p>para</p> resumir';
+echo contarTempo('2020-11-11 18:01:10');
 
 
-echo resumirTexto($texto, 50);
 
 
 
 /**
- * Próxima aula 22:
+ * Próxima aula 28:
  * 
- * https://www.youtube.com/watch?v=jcasYy_g4lg&list=PL0N5TAOhX5E9eJ9Ix6YUIgEw3lNmaIEE9&index=21
+ * https://www.youtube.com/watch?v=DWrugf6OCm4&list=PL0N5TAOhX5E9eJ9Ix6YUIgEw3lNmaIEE9&index=27
  * 
  * 
  * 
