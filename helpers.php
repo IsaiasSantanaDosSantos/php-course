@@ -1,6 +1,32 @@
 <?php
+
+/**
+ * 
+ *Validando e-amil
+ * @param string $email
+ * @return boolean
+ */
+function validarEmail( string $email) : bool
+{
+    return filter_var($email, FILTER_VALIDATE_EMAIL);
+}
+
+
+/**
+ * 
+ *Validando url
+ * @param string $email
+ * @return boolean
+ */
+function validarUrl(string $url): bool
+{
+    return filter_var($url, FILTER_VALIDATE_URL);
+}
+
+
 /**
  * Contar o tempo de uma data
+ *
  * @param string $data
  * @return string
  */

@@ -9,16 +9,24 @@ require_once 'sistema/configuracao.php';
 include_once 'helpers.php';
 //echo formatarValor();
 
-echo contarTempo('2020-11-11 18:01:10');
+//echo contarTempo('2020-11-11 18:01:10');
+/*
+if(validarEmail('teste@gmail.com')){
+    echo 'Endereço de e-mail válido';
+} else {
+    echo 'E-mail invalido.';
+}
+*/
+var_dump(validarUrl('https://teste.com'));
 
 
 
 
 
 /**
- * Próxima aula 28:
+ * Próxima aula 29:
  * 
- * https://www.youtube.com/watch?v=DWrugf6OCm4&list=PL0N5TAOhX5E9eJ9Ix6YUIgEw3lNmaIEE9&index=27
+ * https://www.youtube.com/watch?v=iTXf4cS4upk&list=PL0N5TAOhX5E9eJ9Ix6YUIgEw3lNmaIEE9&index=28
  * 
  * 
  * 
