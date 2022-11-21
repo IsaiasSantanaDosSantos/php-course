@@ -17,7 +17,10 @@ if(validarEmail('teste@gmail.com')){
     echo 'E-mail invalido.';
 }
 */
-var_dump(validarUrl('https://teste.com'));
+$url = 'http://unset.';
+var_dump(validarUrlComFiltro($url));
+echo '<hr>';
+var_dump(validarUrl($url));
 
 
 
