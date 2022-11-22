@@ -8,11 +8,9 @@
 require_once 'sistema/configuracao.php';
 include_once 'helpers.php';
 
-echo SITE_NOME;
-echo '<hr>';
-echo constant('SITE_NOME');
+//var_dump(localhoste());
 
-
+echo url('/noticias');
 
 /**
  * Próxima aula 29:

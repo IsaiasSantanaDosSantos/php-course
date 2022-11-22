@@ -9,7 +9,7 @@ define('SITE_NOME', 'UnSet');
 define('SITE_DESCRICAO', 'UnSet - Tecnologia em Sistemas');
 
 //url do sistema
-define('URL_PRODUCAO', 'http://unset.com.br');
+define('URL_PRODUCAO', 'https://unset.com.br');
 define('URL_DESENVOLVIMENTO', 'http://localhost/blog');
 
-//const SITE_NOME2 = 'UnSet'; //Exemplo
+//const SITE_NOME2 = 'UnSet'; //outro exemplo de como criar uma variável
