@@ -7,22 +7,10 @@
 
 require_once 'sistema/configuracao.php';
 include_once 'helpers.php';
-//echo formatarValor();
 
-//echo contarTempo('2020-11-11 18:01:10');
-/*
-if(validarEmail('teste@gmail.com')){
-    echo 'Endereço de e-mail válido';
-} else {
-    echo 'E-mail invalido.';
-}
-*/
-$url = 'http://unset.';
-var_dump(validarUrlComFiltro($url));
+echo SITE_NOME;
 echo '<hr>';
-var_dump(validarUrl($url));
-
-
+echo constant('SITE_NOME');
 
 
 
