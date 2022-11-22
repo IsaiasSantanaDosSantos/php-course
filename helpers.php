@@ -1,5 +1,20 @@
 <?php
 
+function slug( string $string): string
+{
+    $mapa['a'] = 'ÀÁÂÃÉÈÊÌÍÎÓÒÕÔÚÙÛáàâãéèêíìîóòôõúùûýçÇñÑ!@#$%¨&*()_+£¢¬ªº<>`:^~,.#%"? ;\\\'*-+= ';
+
+    $mapa['b'] = 'aaaaeeeiiioooouuuaaaaeeeiiioooouuuyccnn';
+
+    $slug = strtr(utf8_decode($string), utf8_decode($mapa['a']), $mapa['b']);
+
+    $slug = strip_tags(trim($slug));
+    $slug = str_replace(' ', '-', $slug);
+    $slug = str_replace(['-----', '----', '---', '--', '-'], '-', $slug);
+
+    return strtolower(utf8_decode($slug));
+}
+
 function dataAtual(): string 
 {
     $diaMes = date('d');
