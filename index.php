@@ -8,9 +8,39 @@
 require_once 'sistema/configuracao.php';
 include_once 'helpers.php';
 
-//var_dump(localhoste());
+echo saudacao().' hoje é '.dataAtual();
 
-echo url('/noticias');
+
+
+
+
+
+
+
+
+
+// //var_dump(localhoste());
+// $mese = ['j'=>'Janeiro', 'f'=>'Fevereiro', 'm'=>'Março', 'a'=>'Abril'];
+// // $mese = array();
+// echo '<hr>';
+
+// foreach($mese as $chave => $valor){
+//     echo $chave.' => '.$valor.', ';
+// }
+// echo '<hr>';
+
+// var_dump($mese);
+
+// echo '<hr>';
+
+// echo $mese[2];
+
+// echo '<hr>';
+// echo $_SERVER['PHP_SELF'];
+
+// echo '<hr>';
+
+// var_dump($_SERVER);
 
 /**
  * Próxima aula 29:
