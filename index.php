@@ -22,24 +22,11 @@ $numero = 6;
 //     echo $i." x ".$num." = ".$i*$num."<br/>";
     
 // }
-$cpf = '33031332806';
-for ($t = 9; $t < 11; $t++){
-    for($d = 0, $c = 0; $c < $t; $c++){
-        $d += $cpf[$c] * (($t + 1) -$c);
-    }
-    $d = ((10 * $d) % 11) % 10;
-    if($cpf[$c] != $d){
-        echo ' CPF Inválido!';
-    } else {
-        echo ' CPF Válido!';
-    }
-}
+$cpf = '330.313.328-06';
 
+var_dump(validarCpf($cpf));
 
-
-
-
-
+// echo $limparNumero = preg_replace('/[^0-9]/', '', $cpf);
 
 
 
