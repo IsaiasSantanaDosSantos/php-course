@@ -9,7 +9,31 @@ require_once 'sistema/configuracao.php';
 include_once 'helpers.php';
 
 
-echo saudacao();
+$numero = 6;
+
+// while ($numero <= 10){
+//     echo $numero++."<br/>";
+// };
+// echo '<hr/>';
+
+// for($i = 0; $i <= 10; $i++){
+//     $num = 5;
+//     // echo ($i % 2 ? $i.' → impar': $i.' → par').'<br/>';
+//     echo $i." x ".$num." = ".$i*$num."<br/>";
+    
+// }
+$cpf = '33031332806';
+for ($t = 9; $t < 11; $t++){
+    for($d = 0, $c = 0; $c < $t; $c++){
+        $d += $cpf[$c] * (($t + 1) -$c);
+    }
+    $d = ((10 * $d) % 11) % 10;
+    if($cpf[$c] != $d){
+        echo ' CPF Inválido!';
+    } else {
+        echo ' CPF Válido!';
+    }
+}
 
 
 
