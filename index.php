@@ -11,4 +11,7 @@ include './sistema/Nucleo/Mensagem.php';
 
 $msg = new Mensagem();
 
+echo $msg->css ='Texto de teste';
+echo '<br/>';
+
 var_dump($msg);
