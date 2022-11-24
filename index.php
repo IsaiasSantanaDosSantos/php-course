@@ -7,75 +7,8 @@
 
 require_once 'sistema/configuracao.php';
 include_once 'helpers.php';
+include './sistema/Nucleo/Mensagem.php';
 
+$msg = new Mensagem();
 
-$numero = 6;
-
-// while ($numero <= 10){
-//     echo $numero++."<br/>";
-// };
-// echo '<hr/>';
-
-// for($i = 0; $i <= 10; $i++){
-//     $num = 5;
-//     // echo ($i % 2 ? $i.' → impar': $i.' → par').'<br/>';
-//     echo $i." x ".$num." = ".$i*$num."<br/>";
-    
-// }
-$cpf = '330.313.328-06';
-
-var_dump(validarCpf($cpf));
-
-// echo $limparNumero = preg_replace('/[^0-9]/', '', $cpf);
-
-
-
-
-// echo slug("Adão \"Negro\" - '2022'").'<hr>';
-// echo slug("Avatar 2: O Caminho da Águia").'<hr>';
-// echo slug("Não! Não Olhe!").'<hr>';
-// echo slug("Sonic 2 - O Filme").'<hr>';
-// echo slug("NOVA SÉRIE NO DISNEY+!").'<hr>';
-// echo slug("100 Melhores filmes").'<hr>';
-// echo slug("teste!@###$%6''%%'',*.:/?\|,").'<hr>';
-
-
-
-
-
-
-
-
-
-
-// //var_dump(localhoste());
-// $mese = ['j'=>'Janeiro', 'f'=>'Fevereiro', 'm'=>'Março', 'a'=>'Abril'];
-// // $mese = array();
-// echo '<hr>';
-
-// foreach($mese as $chave => $valor){
-//     echo $chave.' => '.$valor.', ';
-// }
-// echo '<hr>';
-
-// var_dump($mese);
-
-// echo '<hr>';
-
-// echo $mese[2];
-
-// echo '<hr>';
-// echo $_SERVER['PHP_SELF'];
-
-// echo '<hr>';
-
-// var_dump($_SERVER);
-
-/**
- * Próxima aula 29:
- * 
- * https://www.youtube.com/watch?v=iTXf4cS4upk&list=PL0N5TAOhX5E9eJ9Ix6YUIgEw3lNmaIEE9&index=28
- * 
- * 
- * 
- */
+var_dump($msg);
