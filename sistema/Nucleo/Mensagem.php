@@ -7,6 +7,17 @@ class Mensagem
     private $texto;
     private $css;
 
+    public function __toString()
+    {
+        return $this->renderizar();
+    }
+
+    /**
+     * Metódo responsável pelas mensagem 
+     *
+     * @param string $mensagem
+     * @return Mensagem
+     */
     public function sucesso (string $mensagem):Mensagem
     
     {

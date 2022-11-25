@@ -13,15 +13,16 @@ require_once 'sistema/configuracao.php';
 include_once 'helpers.php';
 include './sistema/Nucleo/Mensagem.php';
 
-$msg = new Mensagem();
+echo (new Mensagem())->alerta('Texto de alerta!');
 
-echo $msg->sucesso('Mensagem de sucesso!')->renderizar();
-echo '<br/>';
-echo $msg->informa('Mensagem de informações!')->renderizar();
-echo '<br/>';
-echo $msg->alerta('Mensagem de alerta!')->renderizar();
-echo '<br/>';
-echo $msg->erro('Mensagem de erro!')->renderizar();
-echo '<br/>';
+// $msg = new Mensagem();
 
-var_dump($msg);
+// echo $msg->erro('Mensagem de erro!')->renderizar();
+// echo '<br/>';
+
+// var_dump($msg);
+
+// echo (new Mensagem())->erro("Mensagem de erro!")->renderizar();
+
+
+echo '<br/>';
