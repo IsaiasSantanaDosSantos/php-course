@@ -1,6 +1,13 @@
 <?php
+
+namespace sistema\Nucleo;
+
+
 /**
- * @author Isaias <isaiassantanadossantos@hotmail.com>
+ * Classe Mensagem - responsável por exibir as mensagens do sistema. 
+ * 
+ *  @author Isaias <isaiassantanadossantos@hotmail.com>
+ * @copyright Copyright(c) 2022,  Isaias
  */
 class Mensagem 
 {
