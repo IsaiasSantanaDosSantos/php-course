@@ -1,5 +1,10 @@
 <?php
 
+namespace sistema\Nucleo;
+
+class Helpers 
+{
+
 
 
 
@@ -11,13 +16,13 @@
  * @param string $cpf
  * @return boolean
  */
-function validarCpf(string $cpf):bool
+public static function validarCpf(string $cpf):bool
 {
-    $cpf = limparNumero($cpf);
+    $cpf = self::limparNumero($cpf);
 
 if(mb_strlen($cpf) != 11 or preg_match('/(\d)\1{10}/', $cpf)){
     return false;
-}
+};
 
 for ($t = 9; $t < 11; $t++){
     for($d = 0, $c = 0; $c < $t; $c++){
@@ -27,7 +32,7 @@ for ($t = 9; $t < 11; $t++){
     if($cpf[$c] != $d){
         return false;
     } 
-}
+};
 
 return true;
 }
@@ -38,14 +43,14 @@ return true;
  * @param string $numero
  * @return string
  */
-function limparNumero (string $numero) : string
+public static function limparNumero (string $numero) : string
 {
     return preg_replace('/[^0-9]/', '', $numero);
 }
 
 
 //***************************** */
-function slug( string $string): string
+public static function slug( string $string): string
 {
     $mapa['a'] = 'ÀÁÂÃÉÈÊÌÍÎÓÒÕÔÚÙÛáàâãéèêíìîóòôõúùûýçÇñÑ!@#$%¨&*()_+£¢¬ªº<>`:^~,.#%"? ;\\\'*-+= ';
 
@@ -60,7 +65,7 @@ function slug( string $string): string
     return strtolower(utf8_decode($slug));
 }
 
-function dataAtual(): string 
+public static function dataAtual(): string 
 {
     $diaMes = date('d');
     $diaSemana = date('w');
@@ -79,25 +84,25 @@ function dataAtual(): string
 }
 
 
-function url(string $url): string
+public static function url(string $url): string
 {
     $servidor = filter_input(INPUT_SERVER, 'SERVER_NAME');
     $ambiente =($servidor == 'localhost' ? URL_DESENVOLVIMENTO : URL_PRODUCAO); 
 
     if(str_starts_with($url, '/')){
         return $ambiente.$url;
-    }
+    };
 
     return $ambiente.'/'.$url;
 }
 
-function localhoste(): bool
+public static function localhoste(): bool
 {
    $servidor = filter_input(INPUT_SERVER, 'SERVER_NAME');
 
    if($servidor == 'localhost'){
     return true;
-   }
+   };
    return false;
 }
 
@@ -107,19 +112,19 @@ function localhoste(): bool
  * @param string $email
  * @return boolean
  */
-function validarEmail( string $email) : bool
+public static function validarEmail( string $email) : bool
 {
     return filter_var($email, FILTER_VALIDATE_EMAIL);
 }
 
 
-/**
- * 
- *Validando url
- * @param string $email
- * @return boolean
- */
-function validarUrl(string $url): bool
+// /**
+//  * 
+//  *Validando url
+//  * @param string $email
+//  * @return boolean
+//  */
+public static function validarUrl(string $url): bool
 {
    if(mb_strlen($url) < 10){
     return false;
@@ -131,12 +136,12 @@ function validarUrl(string $url): bool
     return true;
    }
    return false;
-};
+}
 
-function validarUrlComFiltro(string $url): bool
+public static function validarUrlComFiltro(string $url): bool
 {
     return filter_var($url, FILTER_VALIDATE_URL);
-};
+}
 
 
 /**
@@ -145,7 +150,7 @@ function validarUrlComFiltro(string $url): bool
  * @param string $data
  * @return string
  */
-function contarTempo(string $data): string
+public static function contarTempo(string $data): string
 {
     $agora = strtotime(date('Y-m-d H:i:s'));
     
@@ -175,7 +180,7 @@ function contarTempo(string $data): string
     return $meses == 1 ? 'há 1 mês' : 'há '.$meses.' meses';
 } else {
     return $anos == 1 ? 'há 1 ano' : 'há '.$anos.' anos';
-}
+};
     
 }
 
@@ -184,7 +189,7 @@ function contarTempo(string $data): string
  * @param float $valor
  * @return string
  */
-function  formatarValor(float $valor = null): string
+public static function  formatarValor(float $valor = null): string
 {
     return number_format (($valor ? $valor : 10), 2,',','.');
 }
@@ -195,7 +200,7 @@ function  formatarValor(float $valor = null): string
  * @return string
  */
 
-function formatarNumero(int $numero = null ): string
+public static function formatarNumero(int $numero = null ): string
 {
     return number_format($numero ? : 50, 0,'.','.');
 }
@@ -209,10 +214,11 @@ function formatarNumero(int $numero = null ): string
 
 
 
-function saudacao(): string
+public static function saudacao(): string
 {
    echo $relogio = date('H:i:s');
 
+   $hora = date('H');
 
     // if($hora >= 0 AND $hora <= 5){
     //     $saudacao = ' Boa madrugada';
@@ -222,9 +228,8 @@ function saudacao(): string
     //     $saudacao = " Boa tarde";
     // } else {
     //     $saudacao = " Boa noite";
-    // }
+    // };
 
-    $hora = date('H');
 
     // switch($hora){
     //     case $hora >= 0 && $hora <= 5;
@@ -239,7 +244,7 @@ function saudacao(): string
     //     default :
     //     $saudacao = " Boa noite";
 
-    // }
+    // };
 
     $saudacao = match(true) {
         $hora >= 0 and $hora <= 5 => ' Boa madrugada',
@@ -250,7 +255,7 @@ function saudacao(): string
    
 
     return $saudacao;
-};
+}
 
 /**
  * Resume um texto
@@ -260,15 +265,19 @@ function saudacao(): string
  * @param string $continue opcional - o que deve ser exibido ao final do resumo
  * @return string texto resumido
  */
-function resumirTexto(string $texto, int $limite, string $continue = '...'): string
+public static function resumirTexto(string $texto, int $limite, string $continue = '...'): string
 {
     $textoLimpo = trim(strip_tags($texto));
     if(mb_strlen($textoLimpo) <= $limite){
         return $textoLimpo;
-    }
+    };
 
     $resumirTexto = mb_substr($textoLimpo, 0, mb_strrpos(mb_substr($textoLimpo, 0, $limite), ''));
 
 
     return $resumirTexto.$continue;
-};
+}
+
+}
+
+?>
