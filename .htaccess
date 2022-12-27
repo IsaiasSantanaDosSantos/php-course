@@ -1,0 +1,17 @@
+#No show files
+Options -indexes
+
+#Nice url 
+RewriteEngine On
+
+#Base url
+RewriteBase /blue
+
+#Rewrite cond 
+RewriteCond %{SCRIPT_FILENAME} !-f 
+RewriteCond %{SCRIPT_FILENAME} !-d 
+RewriteCond %{SCRIPT_FILENAME} !-l 
+
+#Regra 
+RewriteRule ^(.*)$ index.php/$1
+
