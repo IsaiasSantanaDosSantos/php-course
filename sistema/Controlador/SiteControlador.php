@@ -21,6 +21,9 @@ class SiteControlador  extends Controlador
 
     public function sobre ():void 
     {
-        echo 'Página sobre';
+        echo $this->template->renderizar('sobre.html', [
+            'titulo'=> 'teste de título',
+            'subtitulo' => 'teste de subtitulo'
+        ]);
     }
 }
