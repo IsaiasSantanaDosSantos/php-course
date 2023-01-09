@@ -9,11 +9,12 @@
     "
   >
     <span class="text-muted siteFooter"
-      >&COPY; 2023 {{constant('SITE_NOME')}}</span
+      >&COPY; 2023 - {{ "now"|date("Y") }} {{constant('SITE_NOME')}}</span
     >
     <span class="text-muted siteFooter">
       <ul
-        class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0"  style="justify-content: end !important"
+        class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0"
+        style="justify-content: end !important"
       >
         <li>
           <a href="{{ url()}}" class="nav-link px-2 text-secondary">Home</a>
