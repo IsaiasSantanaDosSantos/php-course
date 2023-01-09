@@ -2,7 +2,10 @@
 <?php
 require 'vendor/autoload.php';
 
-require 'rotas.php';
+// require 'rotas.php';
+use sistema\Nucleo\Conexao;
+
+$con = Conexao::getInstancia();
 
 
 
