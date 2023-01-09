@@ -14,15 +14,15 @@ class SiteControlador  extends Controlador
     public function index ():void 
     {
         echo $this->template->renderizar('index.html', [
-            'titulo'=> 'teste de título',
-            'subtitulo' => 'teste de subtitulo'
+            // 'titulo'=> 'Página inicial',
+            // 'subtitulo' => 'teste de subtitulo'
         ]);
     }
 
     public function sobre ():void 
     {
         echo $this->template->renderizar('sobre.html', [
-            'titulo'=> 'teste de título',
+            'titulo'=> 'Sobre nós',
             'subtitulo' => 'teste de subtitulo'
         ]);
     }
